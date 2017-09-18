@@ -1,0 +1,14 @@
+<h2>Authors:{{amount}}</h2>
+<ul [attr.myAttribute]="myAttribute">
+    <li *ngFor="let author of authors">
+        {{ author }}
+    </li>
+</ul>
+<button class="btn btn-primary" 
+      [class.active]="isActive"
+      (click)="onSave($event)"
+      >save</button>
+
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" type="email">
+
+<p>{{price | currency:'USD':true:'3.2-2'}}</p>
